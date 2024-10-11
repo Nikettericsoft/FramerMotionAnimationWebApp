@@ -1,0 +1,99 @@
+.stepper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .stepper-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+
+    .stepper-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      flex: 1;
+
+      .step-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--primaryTextColor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .step-label {
+        font-size: 14px;
+      }
+
+      &.active .step-number {
+        background-color: var(--primary);
+        color: var(--primaryTextColor);
+      }
+
+      //&:not(:last-child)::after {
+      //  content: '';
+      //  position: absolute;
+      //  top: 50%;
+      //  left: 100%;
+      //  width: 100%;
+      //  height: 2px;
+      //  background-color: #ddd;
+      //  z-index: -1;
+      //  transition: background-color 0.3s ease;
+      //}
+    }
+
+    //.stepper-step.active ~ .stepper-step::after {
+    //  background-color: #007bff;
+    //}
+
+    //.stepper-step.active::after {
+    //  background-color: #007bff;
+    //}
+  }
+
+  .stepper-content {
+    padding: 20px;
+    border: 1px solid var(--primaryTextColor);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    min-height: 150px;
+  }
+
+  .stepper-controls {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      &:disabled {
+        background-color: var(--primaryTextColor);
+        cursor: not-allowed;
+      }
+
+      &:not(:disabled) {
+        background-color: var(--primary);
+        color: var(--primaryTextColor);
+
+        &:hover {
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/* ProgressBar.scss */
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+}

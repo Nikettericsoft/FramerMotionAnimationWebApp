@@ -1,0 +1,25 @@
+/* Pagination.scss */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-item {
+  background-color: var(--primary);
+  color: var(--primaryTextColor);
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-item.active {
+  background-color: var(--secondary);
+}
+
+.pagination-item:hover {
+  background-color: var(--secondary);
+}
